@@ -16,7 +16,7 @@ var associations = [
     {activity: "HIIT",
     genres: ["Electronic", "Rock", "Pop", "Hip Hop"]},
 
-    {activity: "weight lifting",
+    {activity: "weightlifting",
     genres: ["Metal", "Heavy Rock", "Indie Pop", "Electronic"]},
 
     {activity: "yoga",
