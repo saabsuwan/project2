@@ -40,9 +40,11 @@ var associations = [
 
 module.exports = function(app) {
     app.post("/api/music", function(req, res) {
-        // based on whatever number value I get from the html activity select thing
-        // I'll search for certain genres with sequelize and select randomly from those
-        // it's gonna be a findAll with a limit of 10
+        // will put a for loop here
+        // it will loop through the entire assocations array
+        // will compare received activity to each association object's activity
+        // if received activity is the same as the current object's activity, I will have a 'var genreList' that will be made equal to the object's genres array
+        // and that will be what I use for the 'op.or' thing to find stuff in the database
 
         db.Song.findAll({order: seqeulize.random(), limit: 10, where: {genre: {[Op.or]: ["Rock", "Electronic", "Upbeat Pop"]}}}).then(function(playlist) {
             console.log(playlist);

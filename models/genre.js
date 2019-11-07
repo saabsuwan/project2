@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var genre = sequelize.define("Genre", {
+    var Song = sequelize.define("Song", {
     genre_name: {
         type: DataTypes.STRING,
         allowNull: false
@@ -13,5 +13,5 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
     }
     });
-    return genre;
+    return Song;
 };
