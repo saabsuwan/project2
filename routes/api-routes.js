@@ -4,10 +4,10 @@ var associations = [
     {activity: "zumba",
     genres: ["Latin", "Dancehall", "Salse", "Merengue"]},
 
-    {activity: "running (outdoor)",
+    {activity: "running1",
     genres: ["Progressive Rock", "Hip Hop", "Dance-Eletronic", "Pop"]},
 
-    {activity: "running (treadmill)",
+    {activity: "running2",
     genres: ["Heavy Rock", "Upbeat Pop", "Folk & Acoustic", "Indie Pop"]},
 
     {activity: "stairmaster",
