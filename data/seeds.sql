@@ -176,25 +176,25 @@ VALUES ("Pop", "Purple Lamborghini", "Skrillex, Rick Ross", NOW(), NOW());
 
 -- Heavy Rock--
 INSERT INTO genres (genre_name, song, artist, createdAt, updatedAt)
-VALUES ("Heavy rock", "Faint", "Linkin Park", NOW(), NOW());
+VALUES ("Heavy Rock", "Faint", "Linkin Park", NOW(), NOW());
 INSERT INTO genres (genre_name, song, artist, createdAt, updatedAt)
-VALUES ("Heavy rock", "I'm Shipping Up To Boston", "Dropkick Murphys", NOW(), NOW());
+VALUES ("Heavy Rock", "I'm Shipping Up To Boston", "Dropkick Murphys", NOW(), NOW());
 INSERT INTO genres (genre_name, song, artist, createdAt, updatedAt)
-VALUES ("Heavy rock", "Warrior", "Disturbed", NOW(), NOW());
+VALUES ("Heavy Rock", "Warrior", "Disturbed", NOW(), NOW());
 INSERT INTO genres (genre_name, song, artist, createdAt, updatedAt)
-VALUES ("Heavy rock", "Did My Time", "Korn", NOW(), NOW());
+VALUES ("Heavy Rock", "Did My Time", "Korn", NOW(), NOW());
 INSERT INTO genres (genre_name, song, artist, createdAt, updatedAt)
-VALUES ("Heavy rock", "Bulls On Parade", "Rage Against The Machine", NOW(), NOW());
+VALUES ("Heavy Rock", "Bulls On Parade", "Rage Against The Machine", NOW(), NOW());
 INSERT INTO genres (genre_name, song, artist, createdAt, updatedAt)
-VALUES ("Heavy rock", "Bad Religion", "Godsmack", NOW(), NOW());
+VALUES ("Heavy Rock", "Bad Religion", "Godsmack", NOW(), NOW());
 INSERT INTO genres (genre_name, song, artist, createdAt, updatedAt)
-VALUES ("Heavy rock", "Headstrong", "Trapt", NOW(), NOW());
+VALUES ("Heavy Rock", "Headstrong", "Trapt", NOW(), NOW());
 INSERT INTO genres (genre_name, song, artist, createdAt, updatedAt)
-VALUES ("Heavy rock", "Duality", "Slipknot", NOW(), NOW());
+VALUES ("Heavy Rock", "Duality", "Slipknot", NOW(), NOW());
 INSERT INTO genres (genre_name, song, artist, createdAt, updatedAt)
-VALUES ("Heavy rock", "Paranoid", "Black Sabbath", NOW(), NOW());
+VALUES ("Heavy Rock", "Paranoid", "Black Sabbath", NOW(), NOW());
 INSERT INTO genres (genre_name, song, artist, createdAt, updatedAt)
-VALUES ("Heavy rock", "For Whom The Bell Tolls", "Metallica", NOW(), NOW());
+VALUES ("Heavy Rock", "For Whom The Bell Tolls", "Metallica", NOW(), NOW());
 
 -- Upbeat Pop --
 INSERT INTO genres (genre_name, song, artist, createdAt, updatedAt)
