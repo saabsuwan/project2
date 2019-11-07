@@ -1,22 +1,24 @@
-//You need to create a .env and put it in the root of your project 
-//Make sure you add the .env to your .gitignore!
 require("dotenv").config();
-​
-//Create an object that loads in the info from the environment variables in .env
-const config = {
-    development: {
-        username: "root",
-        password: process.env.DB_LOCAL_PASSWORD,
-        database: "playlist_db",
-        host: "localhost",
-        dialect: "mysql"
+
+const configObj = {
+    "development": {
+        "username": process.env.DB_USER_LOCAL,
+        "password": process.env.DB_PASSWORD_LOCAL,
+        "database": process.env.DB_DATABASE_LOCAL,
+        "host": process.env.DB_HOST_LOCAL,
+        "dialect": "mysql"
     },
-    //Note: this is a spoiler for how to configure for Heroku ;)
-    production: {
-        use_env_variable: "JAWSDB_URL",
-        dialect: "mysql"
+    "test": {
+        "username": process.env.DB_USER_TEST,
+        "password": process.env.DB_PASSWORD_TEST,
+        "database": process.env.DB_DATABASE_TEST,
+        "host": process.env.DB_HOST_TEST,
+        "dialect": "mysql"
+    },
+    "production": {
+        "use_env_variable": "JAWSDB_URL",
+        "dialect": "mysql"
     }
-};
-​
-//Lastly, export that config object
-module.exports = config;
+}
+
+module.exports = configObj;
