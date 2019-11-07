@@ -1,5 +1,4 @@
 ## GYM Beats
-
 ## Overview
 
 App that lets you select your fitness activity from a list of 12, and returns a playlist of 10 songs for that particular activity.
@@ -19,8 +18,9 @@ App link:
 ## Technology Used
 
 - Sequelize
-- Mysql2
+- mysql2
 - Express
+- dotenv
 - Jquery
 - HTML
 - Bootstrap
