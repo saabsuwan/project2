@@ -21,3 +21,6 @@ App link:
 - Sequelize
 - Mysql2
 - Express
+- Jquery
+- HTML
+- Bootstrap
