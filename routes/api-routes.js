@@ -47,7 +47,7 @@ module.exports = function(app) {
         // and that will be what I use for the 'op.or' thing to find stuff in the database
 
         db.Song.findAll({order: seqeulize.random(), limit: 10, where: {genre: {[Op.or]: ["Rock", "Electronic", "Upbeat Pop"]}}}).then(function(playlist) {
-            console.log(playlist);
+            res.json(playlist);
         })
     })
 };
