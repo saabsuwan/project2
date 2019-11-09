@@ -13,21 +13,20 @@
 
   <body>
     <div class="dropdown">
-      <button class="dropbtn">Activities</button>
-      <div class="dropdown-content">
-        <a value="zumba">Zumba</a>
-        <a value="running1">Running Outdoor</a>
-        <a value="running2">Running Treadmill</a>
-        <a value="stairmaster">Stairmaster</a>
-        <a value="HIIT">HIIT</a>
-        <a value="weightlifting">Weight Lifting</a>
-        <a value="yoga">Yoga</a>
-        <a value="stretching">Stretching</a>
-        <a value="rowing">Rowing</a>
-        <a value="biking">Biking</a>
-        <a value="hiking">Hiking</a>
-        <a value="aerobics">Aerobics</a>
-      </div>
+      <select id="dropdownmenu" name="dropdown-content">
+        <option value="zumba">Zumba</option>
+        <option value="running1">Running Outdoor</option>
+        <option value="running2">Running Treadmill</option>
+        <option value="stairmaster">Stairmaster</option>
+        <option value="HIIT">HIIT</option>
+        <option value="weightlifting">Weight Lifting</option>
+        <option value="yoga">Yoga</option>
+        <option value="stretching">Stretching</option>
+        <option value="rowing">Rowing</option>
+        <option value="biking">Biking</option>
+        <option value="hiking">Hiking</option>
+        <option value="aerobics">Aerobics</option>
+      </select>
     </div>
 
     <div class="audio green-audio-player">
@@ -93,7 +92,17 @@
         />
       </audio>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
     <script src="js/index.js"></script>
+    <script>
+
+
+$("#dropdownmenu").change(function(){
+  alert("The text has been changed.");
+});
+
+</script>
   </body>
 </html>
+
