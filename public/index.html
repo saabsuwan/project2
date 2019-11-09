@@ -13,7 +13,9 @@
 
   <body>
     <div class="dropdown">
-      <select name="dropdown-content">
+
+      <select id="dropdownmenu" name="dropdown-content">
+
         <option value="zumba">Zumba</option>
         <option value="running1">Running Outdoor</option>
         <option value="running2">Running Treadmill</option>
@@ -92,7 +94,17 @@
         />
       </audio>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
     <script src="js/index.js"></script>
+    <script>
+
+
+$("#dropdownmenu").change(function(){
+  alert("The text has been changed.");
+});
+
+</script>
   </body>
 </html>
+
