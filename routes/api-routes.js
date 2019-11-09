@@ -40,13 +40,15 @@ var associations = [
 
 module.exports = function(app) {
     app.post("/api/music", function(req, res) {
-        // will put a for loop here
-        // it will loop through the entire assocations array
-        // will compare received activity to each association object's activity
-        // if received activity is the same as the current object's activity, I will have a 'var genreList' that will be made equal to the object's genres array
-        // and that will be what I use for the 'op.or' thing to find stuff in the database
+        var reqActivity = req.body;
 
-        db.Song.findAll({order: seqeulize.random(), limit: 10, where: {genre: {[Op.or]: ["Rock", "Electronic", "Upbeat Pop"]}}}).then(function(playlist) {
+        for(i = 0; i < associations.length; i++) {
+            if (associations[i].activity == reqActivity) {
+                var musicGenres = associations[i].genres;
+            }
+        }
+
+        db.Song.findAll({order: seqeulize.random(), limit: 10, where: {genre: {[Op.or]: musicGenres}}}).then(function(playlist) {
             res.json(playlist);
         })
     })
