@@ -7,7 +7,6 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -15,7 +14,7 @@
     <div class="dropdown">
 
       <select id="dropdownmenu" name="dropdown-content">
-
+        <option value="default">Please Select</option>
         <option value="zumba">Zumba</option>
         <option value="running1">Running Outdoor</option>
         <option value="running2">Running Treadmill</option>
@@ -87,6 +86,9 @@
         </div>
       </div>
 
+      <div class="playlist">
+      </div>
+
       <audio crossorigin>
         <source
           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/355309/Swing_Jazz_Drum.mp3"
@@ -97,14 +99,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  
     <script src="js/index.js"></script>
+
     <script>
+      $("#dropdownmenu").on("click", function() {
+        var obj = {activity: $(this).children("option:selected").val().trim()};
+        console.log(obj);
 
-
-$("#dropdownmenu").change(function(){
-  alert("The text has been changed.");
-});
-
-</script>
+        if(obj.activity == "default") {
+          console.log("waiting on selection");
+        }
+        else {
+          $.post("/api/music", obj, function(data) {
+            $(".playlist").html(data);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
 
