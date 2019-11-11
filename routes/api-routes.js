@@ -1,4 +1,6 @@
 var db = require("../models");
+var Sequelize = require("sequelize");
+var sequelize = require("../config/config.js");
 
 var associations = [
     {activity: "zumba",
@@ -40,16 +42,23 @@ var associations = [
 
 module.exports = function(app) {
     app.post("/api/music", function(req, res) {
-        var reqActivity = req.body;
+        console.log(req.body);
+        var reqActivity = req.body.activity;
+        console.log(reqActivity);
 
         for(i = 0; i < associations.length; i++) {
+            // console.log("Hello!");
             if (associations[i].activity == reqActivity) {
+                // console.log("Hi there!");
                 var musicGenres = associations[i].genres;
+                console.log(musicGenres);
             }
         }
+        // order: Sequelize.fn("RAND"), limit: 10, 
 
-        db.Song.findAll({order: seqeulize.random(), limit: 10, where: {genre: {[Op.or]: musicGenres}}}).then(function(playlist) {
-            res.json(playlist);
-        })
+        db.Song.findAll({where: {genre_name: {[Sequelize.Op.or]: musicGenres}}}).then(function(playlist) {
+            console.log(playlist);
+            // res.json(playlist);
+        });
     })
 };
