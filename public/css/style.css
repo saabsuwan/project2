@@ -195,3 +195,11 @@ button {
 .dropdown:hover .dropbtn {
   background-color: orange;
 }
+.playlist {
+  color: white;
+  background-color: darkorange;
+  opacity: 0.9;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 30px;
+}
