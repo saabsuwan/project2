@@ -101,7 +101,7 @@
     <script src="js/index.js"></script>
 
     <script>
-      $("#dropdownmenu").on("click", function() {
+      $("#dropdownmenu").on("change", function() {
         var obj = {activity: $(this).children("option:selected").val().trim()};
         console.log(obj);
 
