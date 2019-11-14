@@ -2,6 +2,3 @@
 DROP DATABASE IF EXISTS playlist_db;
 -- Creates the "playlist_db" database --
 CREATE DATABASE playlist_db;
-
-
-
