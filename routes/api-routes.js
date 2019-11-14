@@ -42,23 +42,29 @@ var associations = [
 
 module.exports = function(app) {
     app.post("/api/music", function(req, res) {
-        console.log(req.body);
+        // console.log(req.body);
         var reqActivity = req.body.activity;
-        console.log(reqActivity);
+        // console.log(reqActivity);
 
         for(i = 0; i < associations.length; i++) {
             // console.log("Hello!");
             if (associations[i].activity == reqActivity) {
                 // console.log("Hi there!");
                 var musicGenres = associations[i].genres;
-                console.log(musicGenres);
+                // console.log(musicGenres);
             }
         }
         // order: Sequelize.fn("RAND"), limit: 10, 
 
         db.Song.findAll({where: {genre_name: {[Sequelize.Op.or]: musicGenres}}}).then(function(playlist) {
-            console.log(playlist);
-            // res.json(playlist);
+            // console.log(playlist);
+            var list = [];
+
+            for(var i = 0; i < 10; i++) {
+                list.push(playlist[i]);
+                console.log(list);
+            }
+            res.json(list);
         });
     })
 };

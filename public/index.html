@@ -86,9 +86,6 @@
         </div>
       </div>
 
-      <div class="playlist">
-      </div>
-
       <audio crossorigin>
         <source
           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/355309/Swing_Jazz_Drum.mp3"
@@ -97,6 +94,9 @@
       </audio>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <div class="playlist">
+    </div>
  
     <script src="js/index.js"></script>
 
@@ -110,7 +110,12 @@
         }
         else {
           $.post("/api/music", obj, function(data) {
-            $(".playlist").html(data);
+            console.log(data)
+            for(var i = 0; i < data.length; i++) {
+              console.log("hi");
+              var current = data[i].artist + data[i].song+"<br>";
+              $(".playlist").append(current);
+            }
           });
         }
       });
