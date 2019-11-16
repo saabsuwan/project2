@@ -2,19 +2,19 @@
 
 ## Overview
 
-App that lets you select your fitness activity from a list of 12, and returns a playlist of 10 songs for that particular activity.
+App that lets you select your fitness activity from a list of 12, and returns a playlist of 10 songs from a SQL database for that particular activity.
 
 ## Installation
 
-Using Git Bash or Terminal, clone the code on to your computer using `git clone https://github.com/saabsuwan/project2.git`
+Using Git Bash or Terminal, clone the code on to your computer using `git clone https://github.com/saabsuwan/project2.git`. Following that, navigate to the folder the code is in and type `npm install` into the command line. Next, type `node server.js` to start the server. Then, open the seeds.sql file in MySQL and run it to populate the now-existing database, stop the server running, and start it again. With that, the website should be ready to go, so open up "http://localhost:8080".
 
 ## Usage
 
-when the webpage loads you will see the below screen:
-![case-1](https://i.imgur.com/VlPSOI6.jpg)
+When the webpage loads you will see the following screen:
+![https://i.imgur.com/VlPSOI6.jpg]
 
-You have the option to select from the activity from the menu.After you select the activity 10 songs will be populated.
-![case-2](https://i.imgur.com/pugrgnP.jpg)
+You can select your fitness activity from one of twelve in the dropdown box to the left of the screen. After you select the activity, a playlist of 10 songs will appear.
+![https://i.imgur.com/pugrgnP.jpg]
 
 ## Links
 
@@ -29,3 +29,4 @@ App link:
 - Jquery
 - HTML
 - Bootstrap
+- SASS
