@@ -11,10 +11,10 @@ Using Git Bash or Terminal, clone the code on to your computer using `git clone 
 ## Usage
 
 When the webpage loads you will see the following screen:
-![https://i.imgur.com/VlPSOI6.jpg]
+![use case 1](https://i.imgur.com/VlPSOI6.jpg)
 
 You can select your fitness activity from one of twelve in the dropdown box to the left of the screen. After you select the activity, a playlist of 10 songs will appear.
-![https://i.imgur.com/pugrgnP.jpg]
+![use case 2](https://i.imgur.com/pugrgnP.jpg)
 
 ## Links
 
