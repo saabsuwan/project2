@@ -11,10 +11,10 @@ Using Git Bash or Terminal, clone the code on to your computer using `git clone 
 ## Usage
 
 when the webpage loads you will see the below screen:
-![https://i.imgur.com/VlPSOI6.jpg]
+![case-1](https://i.imgur.com/VlPSOI6.jpg)
 
 You have the option to select from the activity from the menu.After you select the activity 10 songs will be populated.
-![https://i.imgur.com/pugrgnP.jpg]
+![case-2](https://i.imgur.com/pugrgnP.jpg)
 
 ## Links
 
