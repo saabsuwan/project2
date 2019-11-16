@@ -12,7 +12,6 @@
 
   <body>
     <div class="dropdown">
-
       <select id="dropdownmenu" name="dropdown-content">
         <option value="default">Please Select</option>
         <option value="zumba">Zumba</option>
@@ -95,25 +94,29 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <div class="playlist">
-    </div>
- 
+    <div class="playlist"></div>
+
     <script src="js/index.js"></script>
 
     <script>
       $("#dropdownmenu").on("change", function() {
-        var obj = {activity: $(this).children("option:selected").val().trim()};
+        var obj = {
+          activity: $(this)
+            .children("option:selected")
+            .val()
+            .trim()
+        };
         console.log(obj);
 
-        if(obj.activity == "default") {
+        if (obj.activity == "default") {
           console.log("waiting on selection");
-        }
-        else {
+        } else {
           $.post("/api/music", obj, function(data) {
-            console.log(data)
-            for(var i = 0; i < data.length; i++) {
+            console.log(data);
+            $(".playlist").empty();
+            for (var i = 0; i < data.length; i++) {
               console.log("hi");
-              var current = data[i].artist + data[i].song+"<br>";
+              var current = data[i].artist + data[i].song + "<br>";
               $(".playlist").append(current);
             }
           });
@@ -122,4 +125,3 @@
     </script>
   </body>
 </html>
-
