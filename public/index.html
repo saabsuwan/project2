@@ -108,7 +108,7 @@
         };
         console.log(obj);
 
-        if (obj.activity == "default") {
+        if (obj.activity === "default") {
           console.log("waiting on selection");
         } else {
           $.post("/api/music", obj, function(data) {
