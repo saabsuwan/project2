@@ -113,6 +113,7 @@
         } else {
           $.post("/api/music", obj, function(data) {
             console.log(data);
+            console.log("what is data?: "+data);
             $(".playlist").empty();
             for (var i = 0; i < data.length; i++) {
               console.log("hi");
