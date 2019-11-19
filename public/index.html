@@ -112,13 +112,11 @@
           console.log("waiting on selection");
         } else {
           $.post("/api/music", obj, function(data) {
-            console.log(data);
-            console.log("what is data?: "+data);
-            $(".playlist").empty();
-            for (var i = 0; i < data.length; i++) {
-              console.log("hi");
-              var current = data[i].artist + ", " + data[i].song + "<br>";
-              $(".playlist").append(current);
+             console.log("hi");
+              console.log("what is data??:"+data)
+              // var current = data[i].artist + data[i].song + "<br>";
+              // $(".playlist").append(current);
+              $(".playlist").append(data[i].artist + data[i].song + "<br>");
             }
           });
         }
